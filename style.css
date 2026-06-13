@@ -285,21 +285,15 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 1.5px solid rgba(0, 255, 204, 0.35);
-    animation: radarExpand 4s infinite linear;
+    border: 3px solid rgba(0, 255, 204, 0.8); /* Jača boja */
 }
 
-.radar-center-user {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
-    background: var(--neon-cyan);
-    border-radius: 50%;
-    box-shadow: 0 0 20px var(--neon-cyan);
-    z-index: 2;
+.wave-expand {
+    animation: radarExpand 3s infinite linear;
+}
+
+.wave-shrink {
+    animation: radarShrink 3s infinite linear;
 }
 
 .radar-person {
@@ -323,6 +317,17 @@ a {
 @keyframes floatOrbit {
     0% { transform: translate(0, 0) scale(0.9); }
     100% { transform: translate(15px, -15px) scale(1.1); }
+}
+
+@keyframes radarExpand {
+    0% { width: 0; height: 0; opacity: 1; }
+    100% { width: 100%; height: 100%; opacity: 0; }
+}
+
+@keyframes radarShrink {
+    0% { width: 100%; height: 100%; opacity: 0; }
+    10% { opacity: 1; }
+    100% { width: 0; height: 0; opacity: 1; }
 }
 
 /* ===== SEKCIJE OPĆENITO ===== */
@@ -432,6 +437,14 @@ section {
     
     .hero-text {
         max-width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .radar-container {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        margin: 0 auto;
     }
     
     .hero-buttons {
@@ -663,6 +676,7 @@ section {
         top: 75%;
         left: 0;
         bottom: auto;
+        right: auto;
     }
 
     .flyer-1 { animation: flyToPerson1_mobile 4s infinite linear; }
