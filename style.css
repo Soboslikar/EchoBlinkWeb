@@ -291,6 +291,44 @@ a {
     animation: radarExpand 4s infinite linear;
 }
 
+.radar-center-user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background: var(--neon-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--neon-cyan);
+    z-index: 2;
+}
+
+.radar-person {
+    position: absolute;
+    font-size: 40px;
+    background: rgba(0,0,0,0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: floatOrbit 6s infinite ease-in-out alternate;
+}
+
+.rp-1 { top: 20%; left: 30%; animation-delay: 0s; }
+.rp-2 { top: 70%; left: 20%; animation-delay: 1s; }
+.rp-3 { top: 30%; right: 25%; animation-delay: 2s; }
+.rp-4 { top: 75%; right: 30%; animation-delay: 3s; }
+
+@keyframes floatOrbit {
+    0% { transform: translate(0, 0) scale(0.9); }
+    100% { transform: translate(15px, -15px) scale(1.1); }
+}
+
 /* ===== SEKCIJE OPĆENITO ===== */
 section {
     padding: 100px 0;
@@ -599,6 +637,9 @@ section {
 
 @media (max-width: 600px) {
     .business-animation {
+        flex: none;
+        width: 100%;
+        min-height: 500px;
         height: 500px;
         margin-top: 20px;
         border: none;
