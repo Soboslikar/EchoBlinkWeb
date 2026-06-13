@@ -404,8 +404,8 @@ section {
         justify-content: center;
     }
     
-    .nav-links {
-        display: none; /* Za sada sakrivamo na mobitelu */
+    .nav-links, .nav-container .btn-primary {
+        display: none; /* Sakrivamo linkove i gumb na mobitelu */
     }
     
     .radar-container {
@@ -597,13 +597,62 @@ section {
 
 @media (max-width: 600px) {
     .business-animation {
-        transform: scale(0.65);
-        transform-origin: top center;
-        height: 260px; /* Prilagođena visina zbog skaliranja */
+        height: 500px;
         margin-top: 20px;
         border: none;
         background: transparent;
     }
+    
+    .shop-node {
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .person-1 {
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .person-2 {
+        top: 75%;
+        right: 15%;
+    }
+
+    .person-3 {
+        top: 75%;
+        left: 15%;
+        bottom: auto;
+    }
+
+    .flyer-1 { animation: flyToPerson1_mobile 4s infinite linear; }
+    .flyer-2 { animation: flyToPerson2_mobile 4s infinite linear; animation-delay: 2s; }
+    .flyer-3 { animation: flyToPerson3_mobile 4s infinite linear; animation-delay: 2s; }
+}
+
+@keyframes flyToPerson1_mobile {
+    0% { top: 60px; left: 40px; opacity: 0; transform: scale(0.5) translateX(-50%); }
+    10% { opacity: 1; transform: scale(1) translateX(-50%); }
+    40% { top: 140px; left: 40px; opacity: 1; transform: scale(1) translateX(-50%); }
+    50% { top: 160px; left: 40px; opacity: 0; transform: scale(0.5) translateX(-50%); }
+    100% { opacity: 0; }
+}
+
+@keyframes flyToPerson2_mobile {
+    0% { top: 60px; left: 40px; opacity: 0; transform: scale(0.5) translateX(-50%); }
+    10% { opacity: 1; transform: scale(1) translateX(-50%); }
+    40% { top: 140px; left: 90px; opacity: 1; transform: scale(1) translateX(-50%); }
+    50% { top: 160px; left: 100px; opacity: 0; transform: scale(0.5) translateX(-50%); }
+    100% { opacity: 0; }
+}
+
+@keyframes flyToPerson3_mobile {
+    0% { top: 60px; left: 40px; opacity: 0; transform: scale(0.5) translateX(-50%); }
+    10% { opacity: 1; transform: scale(1) translateX(-50%); }
+    40% { top: 140px; left: -10px; opacity: 1; transform: scale(1) translateX(-50%); }
+    50% { top: 160px; left: -20px; opacity: 0; transform: scale(0.5) translateX(-50%); }
+    100% { opacity: 0; }
 }
 
 /* ===== SOS SEKCIJA ===== */
