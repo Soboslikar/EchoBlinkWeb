@@ -1,0 +1,716 @@
+/* ===== OSNOVNE POSTAVKE ===== */
+:root {
+    --bg-dark: #0F1A24;         /* Glavna tamno plava pozadina */
+    --neon-cyan: #00FFCC;       /* EchoBlink Cijan boja (primarna) */
+    --neon-blue: #00AAFF;       /* Sporedna plava */
+    --text-main: #FFFFFF;
+    --text-muted: #8892B0;
+    --glass-bg: rgba(15, 26, 36, 0.6);
+    --glass-border: rgba(0, 255, 204, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== NAVIGACIJA ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.logo-echo { color: var(--text-main); }
+.logo-blink { color: var(--neon-cyan); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-cyan);
+}
+
+/* ===== GUMBI ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 255, 204, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+.btn-glow {
+    background: linear-gradient(90deg, #00FFCC, #00AAFF);
+    color: #0F1A24;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.8);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+    border-color: var(--text-main);
+}
+
+/* ===== HERO SEKCIJA ===== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 255, 204, 0.1);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    color: var(--neon-cyan);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* ===== HERO MOCKUP (Mobitel) ===== */
+.hero-mockup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.phone-frame {
+    width: 300px;
+    height: 600px;
+    background: #111;
+    border-radius: 40px;
+    border: 8px solid #222;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(0, 255, 204, 0.1);
+    position: relative;
+    overflow: hidden;
+    transform: rotateY(-15deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.phone-frame:hover {
+    transform: rotateY(-5deg) rotateX(2deg);
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-dark);
+    position: relative;
+}
+
+.mockup-radar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px dashed rgba(0, 255, 204, 0.3);
+}
+
+.mockup-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--neon-cyan);
+    color: #000;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+.mockup-match {
+    position: absolute;
+    background: rgba(15, 26, 36, 0.9);
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===== RADAR POZADINSKA ANIMACIJA ===== */
+.radar-container {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 800px;
+    height: 800px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.radar-wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1.5px solid rgba(0, 255, 204, 0.35);
+    animation: radarExpand 4s infinite linear;
+}
+
+/* ===== SEKCIJE OPĆENITO ===== */
+section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== ZNAČAJKE (Features) ===== */
+.features {
+    background-color: rgba(15, 26, 36, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--neon-cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 255, 204, 0.2);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.3));
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.wave-1 { width: 0; height: 0; animation-delay: 0s; }
+.wave-2 { width: 0; height: 0; animation-delay: 1.3s; }
+.wave-3 { width: 0; height: 0; animation-delay: 2.6s; }
+
+@keyframes radarExpand {
+    0% { width: 0; height: 0; opacity: 1; }
+    100% { width: 100%; height: 100%; opacity: 0; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .nav-links {
+        display: none; /* Za sada sakrivamo na mobitelu */
+    }
+    
+    .radar-container {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}
+
+/* ===== POSLOVANJE (Business) ===== */
+.business-section {
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #0a1118 100%);
+}
+
+.business-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.business-text {
+    flex: 1;
+}
+
+.badge-gold {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #FFD700;
+}
+
+.business-text h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.business-text p {
+    color: var(--text-muted);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.business-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.business-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.icon-check {
+    color: var(--neon-cyan);
+    font-weight: bold;
+}
+
+/* Viralna Animacija */
+.business-animation {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.shop-node, .person-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.shop-node {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.person-1 {
+    top: 50%;
+    left: 45%;
+    transform: translateY(-50%);
+}
+
+.person-2 {
+    top: 15%;
+    right: 5%;
+}
+
+.person-3 {
+    bottom: 15%;
+    right: 5%;
+}
+
+.shop-icon, .person-icon {
+    font-size: 50px;
+    background: rgba(0,0,0,0.5);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    margin-bottom: 10px;
+}
+
+.shop-icon {
+    border-color: #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.node-label {
+    font-weight: 600;
+    font-size: 14px;
+    background: #000;
+    padding: 4px 12px;
+    border-radius: 10px;
+}
+
+/* Animacija letaka */
+.flying-flyer {
+    position: absolute;
+    background: #FFD700;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 4;
+}
+
+.flyer-1 {
+    animation: flyToPerson1 4s infinite linear;
+}
+
+.flyer-2 {
+    animation: flyToPerson2 4s infinite linear;
+    animation-delay: 2s;
+}
+
+.flyer-3 {
+    animation: flyToPerson3 4s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes flyToPerson1 {
+    0% { top: 40px; left: 80px; opacity: 0; transform: scale(0.5); }
+    10% { opacity: 1; transform: scale(1); }
+    40% { top: 40px; left: 160px; opacity: 1; transform: scale(1); }
+    50% { top: 40px; left: 190px; opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0; }
+}
+
+@keyframes flyToPerson2 {
+    0% { top: 40px; left: 80px; opacity: 0; transform: scale(0.5); }
+    10% { opacity: 1; transform: scale(1); }
+    40% { top: -60px; left: 180px; opacity: 1; transform: scale(1); }
+    50% { top: -90px; left: 200px; opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0; }
+}
+
+@keyframes flyToPerson3 {
+    0% { top: 40px; left: 80px; opacity: 0; transform: scale(0.5); }
+    10% { opacity: 1; transform: scale(1); }
+    40% { top: 140px; left: 180px; opacity: 1; transform: scale(1); }
+    50% { top: 170px; left: 200px; opacity: 0; transform: scale(0.5); }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 992px) {
+    .business-container {
+        flex-direction: column;
+    }
+    .business-animation {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+/* ===== SOS SEKCIJA ===== */
+.sos-section {
+    background-color: #0A0F14;
+    text-align: center;
+    border-top: 1px solid rgba(255, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.sos-container {
+    max-width: 800px;
+}
+
+.sos-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: pulseRed 2s infinite;
+}
+
+@keyframes pulseRed {
+    0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,0,0,0)); }
+    50% { transform: scale(1.1); filter: drop-shadow(0 0 30px rgba(255,0,0,0.8)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,0,0,0)); }
+}
+
+.sos-text h2 {
+    color: #FF4444;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sos-text p {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+/* ===== WAITLIST SEKCIJA ===== */
+.waitlist-section {
+    text-align: center;
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 255, 204, 0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)" /></svg>');
+    background-color: var(--bg-dark);
+}
+
+.waitlist-section h2 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+
+.waitlist-section p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.waitlist-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.email-input {
+    flex: 1;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.3);
+    color: #FFF;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.email-input:focus {
+    border-color: var(--neon-cyan);
+}
+
+@media (max-width: 600px) {
+    .waitlist-form {
+        flex-direction: column;
+    }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #050A0F;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--neon-cyan);
+}
