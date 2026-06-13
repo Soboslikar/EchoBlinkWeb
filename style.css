@@ -4,7 +4,7 @@
     --neon-cyan: #00FFCC;       /* EchoBlink Cijan boja (primarna) */
     --neon-blue: #00AAFF;       /* Sporedna plava */
     --text-main: #FFFFFF;
-    --text-muted: #8892B0;
+    --text-muted: #c4d4e8;      /* Svjetlija siva/plava za bolju čitljivost */
     --glass-bg: rgba(15, 26, 36, 0.6);
     --glass-border: rgba(0, 255, 204, 0.2);
 }
