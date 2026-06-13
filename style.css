@@ -285,7 +285,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 3px solid rgba(0, 255, 204, 0.8); /* Jača boja */
+    border: 2.5px solid rgba(0, 255, 204, 0.5); /* Malo smanjena boja */
 }
 
 .wave-expand {
@@ -309,10 +309,10 @@ a {
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
-.rp-1 { top: 35%; left: 35%; animation-delay: 0s; }
-.rp-2 { top: 60%; left: 35%; animation-delay: 1s; }
-.rp-3 { top: 35%; right: 35%; animation-delay: 2s; }
-.rp-4 { top: 65%; right: 35%; animation-delay: 3s; }
+.rp-1 { top: 25%; left: 25%; animation-delay: 0s; }
+.rp-2 { top: 65%; left: 25%; animation-delay: 1s; }
+.rp-3 { top: 25%; right: 25%; animation-delay: 2s; }
+.rp-4 { top: 70%; right: 25%; animation-delay: 3s; }
 
 @keyframes floatOrbit {
     0% { transform: translate(0, 0) scale(0.9); }
