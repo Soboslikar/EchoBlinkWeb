@@ -151,8 +151,8 @@
             <h2>Budite među prvima.</h2>
             <p>EchoBlink uskoro stiže na Google Play Store. Ostavite svoj email i poslat ćemo vam obavijest čim aplikacija postane dostupna.</p>
             
-            <form class="waitlist-form" onsubmit="event.preventDefault(); alert('Hvala na prijavi! Obavijestit ćemo vas uskoro.');">
-                <input type="email" placeholder="Vaša email adresa..." required class="email-input">
+            <form class="waitlist-form" action="https://formspree.io/f/xbdepzao" method="POST">
+                <input type="email" name="email" placeholder="Tvoja email adresa" required class="email-input">
                 <button type="submit" class="btn btn-glow">Prijavi me</button>
             </form>
         </div>
