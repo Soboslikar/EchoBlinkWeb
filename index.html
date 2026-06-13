@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EchoBlink | Otkrij Tko Je Oko Tebe</title>
-    <meta name="description" content="Decentralizirani komunikacijski sustav. Povežite se s ljudima sličnih interesa oko sebe, potpuno bez interneta.">
-    <link rel="stylesheet" href="style.css?v=7">
+    <title>EchoBlink | Discover Who's Around You</title>
+    <meta name="description" content="Decentralized communication system. Connect with people of similar interests around you, completely without internet.">
+    <link rel="stylesheet" href="style.css?v=8">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Auto-redirect logic -->
+    <script>
+        if (!localStorage.getItem('languageSelected') && navigator.language.startsWith('hr')) {
+            window.location.href = 'hr.html';
+        }
+        function setLanguage() {
+            localStorage.setItem('languageSelected', 'true');
+        }
+    </script>
 </head>
 <body>
 
@@ -21,11 +31,16 @@
                 <span class="logo-echo">Echo</span><span class="logo-blink">Blink</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#kako-radi">Kako radi?</a></li>
-                <li><a href="#poslovanje">Za Poslovanje</a></li>
-                <li><a href="#sos">SOS Sustav</a></li>
+                <li><a href="#kako-radi">How it works?</a></li>
+                <li><a href="#poslovanje">For Business</a></li>
+                <li><a href="#sos">SOS System</a></li>
             </ul>
-            <a href="#waitlist" class="btn btn-primary">Pridruži se listi</a>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <a href="index.html" class="active" onclick="setLanguage()">EN</a> | <a href="hr.html" onclick="setLanguage()">HR</a>
+                </div>
+                <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+            </div>
         </div>
     </nav>
 
@@ -33,12 +48,12 @@
     <header class="hero" id="home">
         <div class="container hero-content">
             <div class="hero-text">
-                <div class="badge">Uskoro na Google Play 🚀</div>
-                <h1>Otkrijte tko je oko vas.<br><span class="highlight">Bez interneta.</span> Bez granica.</h1>
-                <p>Prva hiperlokalna mreža koja spaja ljude sličnih interesa u tvojoj neposrednoj blizini koristeći samo Bluetooth tehnologiju.</p>
+                <div class="badge">Coming soon to Google Play 🚀</div>
+                <h1>Discover who's around you.<br><span class="highlight">No internet.</span> No limits.</h1>
+                <p>The first hyperlocal network that connects people with similar interests in your immediate vicinity using only Bluetooth technology.</p>
                 <div class="hero-buttons">
-                    <a href="#waitlist" class="btn btn-glow">Želim rani pristup</a>
-                    <a href="#kako-radi" class="btn btn-outline">Saznaj više</a>
+                    <a href="#waitlist" class="btn btn-glow">Get Early Access</a>
+                    <a href="#kako-radi" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
 
@@ -59,30 +74,30 @@
     <section id="kako-radi" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Revolucija u <span class="highlight">lokalnoj</span> komunikaciji</h2>
-                <p>Zaboravite na mobilne podatke, Wi-Fi mreže i skupe servere. EchoBlink stvara mrežu od mobitela do mobitela.</p>
+                <h2>A revolution in <span class="highlight">local</span> communication</h2>
+                <p>Forget about mobile data, Wi-Fi networks, and expensive servers. EchoBlink creates a phone-to-phone network.</p>
             </div>
 
             <div class="features-grid">
                 <!-- Kartica 1 -->
                 <div class="feature-card">
                     <div class="feature-icon">📡</div>
-                    <h3>Potpuno Offline</h3>
-                    <p>Koristi ultra-brzi L2CAP Bluetooth protokol. Unesite svoje interese, ponudu ili potražnju, a radar će vas automatski spojiti s kompatibilnim osobama u kafiću, na trgu ili na festivalu, čak i kad su mobilne mreže potpuno zagušene.</p>
+                    <h3>Completely Offline</h3>
+                    <p>Uses the ultra-fast L2CAP Bluetooth protocol. Enter your interests, offers, or requests, and the radar will automatically connect you with compatible people in a cafe, square, or festival, even when mobile networks are completely congested.</p>
                 </div>
 
                 <!-- Kartica 2 -->
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <h3>Privatnost Osigurana</h3>
-                    <p>Nema otvaranja računa, nema lozinki. Sustav funkcionira putem jedinstvenih hardverskih tokena. Vaši osobni podaci nikada ne idu na internet.</p>
+                    <h3>Privacy Guaranteed</h3>
+                    <p>No account creation, no passwords. The system works via unique hardware tokens. Your personal data never goes to the internet.</p>
                 </div>
 
                 <!-- Kartica 3 -->
                 <div class="feature-card">
                     <div class="feature-icon">🔋</div>
-                    <h3>Pametna Baterija</h3>
-                    <p>Zahvaljujući asimetričnom prijenosu i brzim BLE 24-bajtnim paketima, aplikacija može raditi cijeli dan u džepu bez pregrijavanja uređaja.</p>
+                    <h3>Smart Battery</h3>
+                    <p>Thanks to asymmetrical transmission and fast BLE 24-byte packets, the app can run all day in your pocket without overheating your device.</p>
                 </div>
             </div>
         </div>
@@ -92,43 +107,43 @@
     <section id="poslovanje" class="business-section">
         <div class="container business-container">
             <div class="business-text">
-                <div class="badge badge-gold">Za Poslovne Korisnike</div>
-                <h2>Pretvorite prolaznike u <span class="highlight">goste</span>.</h2>
-                <p>Imate kafić, restoran ili trgovinu? Zaboravite na skupo tiskanje papirnatih letaka koji završavaju u smeću. Uz EchoBlink, kreirajte digitalni letak u sekundi i besplatno ga pošaljite svakome tko prođe pored vašeg lokala.</p>
+                <div class="badge badge-gold">For Business Users</div>
+                <h2>Turn passersby into <span class="highlight">guests</span>.</h2>
+                <p>Do you own a cafe, restaurant, or store? Forget about expensive printing of paper flyers that end up in the trash. With EchoBlink, create a digital flyer in seconds and send it for free to everyone who passes by your venue.</p>
                 
                 <ul class="business-list">
-                    <li><span class="icon-check">✓</span> <b>Mreža bez interneta:</b> Letak se automatski prebacuje na mobitele u blizini.</li>
-                    <li><span class="icon-check">✓</span> <b>Lančani doseg:</b> Svaka osoba koja primi vaš letak nakratko (15 min) postaje produžena ruka vašeg lokala, potpuno anonimno i pasivno prosljeđujući ponudu novim prolaznicima.</li>
-                    <li><span class="icon-check">✓</span> <b>Precizna analitika:</b> Uvijek znate koliko je ljudi vidjelo vašu ponudu.</li>
+                    <li><span class="icon-check">✓</span> <b>Internet-free network:</b> The flyer is automatically transferred to nearby phones.</li>
+                    <li><span class="icon-check">✓</span> <b>Chain reach:</b> Every person who receives your flyer briefly (15 min) becomes an extension of your venue, completely anonymously and passively forwarding the offer to new passersby.</li>
+                    <li><span class="icon-check">✓</span> <b>Precise analytics:</b> Always know how many people saw your offer.</li>
                 </ul>
                 
-                <a href="#waitlist" class="btn btn-glow" style="margin-top: 20px;">Isprobajte Poslovni Model</a>
+                <a href="#waitlist" class="btn btn-glow" style="margin-top: 20px;">Try the Business Model</a>
             </div>
             
             <div class="business-animation">
                 <div class="shop-node">
                     <div class="shop-icon">☕</div>
-                    <div class="node-label">Vaš Kafić</div>
+                    <div class="node-label">Your Cafe</div>
                     <!-- Kafić šalje prvom gostu -->
-                    <div class="flying-flyer flyer-1">📄 Popust 20%</div>
+                    <div class="flying-flyer flyer-1">📄 20% Discount</div>
                 </div>
                 
                 <div class="person-node person-1">
                     <div class="person-icon">🚶</div>
-                    <div class="node-label">Gost</div>
+                    <div class="node-label">Guest</div>
                     <!-- Gost šalje dvojici novih -->
-                    <div class="flying-flyer flyer-2">📄 Popust 20%</div>
-                    <div class="flying-flyer flyer-3">📄 Popust 20%</div>
+                    <div class="flying-flyer flyer-2">📄 20% Discount</div>
+                    <div class="flying-flyer flyer-3">📄 20% Discount</div>
                 </div>
                 
                 <div class="person-node person-2">
                     <div class="person-icon">🧍‍♀️</div>
-                    <div class="node-label">Prolaznik</div>
+                    <div class="node-label">Passerby</div>
                 </div>
 
                 <div class="person-node person-3">
                     <div class="person-icon">🏃‍♂️</div>
-                    <div class="node-label">Prolaznik</div>
+                    <div class="node-label">Passerby</div>
                 </div>
             </div>
         </div>
@@ -139,8 +154,8 @@
         <div class="container sos-container">
             <div class="sos-icon">🚨</div>
             <div class="sos-text">
-                <h2>Sigurnost izvan dometa mreže</h2>
-                <p>Zatrebate li pomoć na mjestima gdje je mobilna mreža nedostupna ili zagušena (poput koncerata, festivala ili podzemnih garaža), EchoBlink uskače sa svojim <b>SOS Radarom</b>. Jednim klikom vaš mobitel počinje emitirati hitni poziv u pomoć na sve EchoBlink uređaje u vašoj neposrednoj Bluetooth blizini, omogućujući brzu reakciju ljudi oko vas.</p>
+                <h2>Safety beyond network coverage</h2>
+                <p>If you need help in places where the mobile network is unavailable or congested (like concerts, festivals, or underground garages), EchoBlink jumps in with its <b>SOS Radar</b>. With one click, your phone starts broadcasting an emergency call for help to all EchoBlink devices in your immediate Bluetooth vicinity, enabling a quick response from people around you.</p>
             </div>
         </div>
     </section>
@@ -148,12 +163,12 @@
     <!-- WAITLIST (Lista Čekanja) i FOOTER -->
     <section id="waitlist" class="waitlist-section">
         <div class="container">
-            <h2>Budite među prvima.</h2>
-            <p>EchoBlink uskoro stiže na Google Play Store. Ostavite svoj email i poslat ćemo vam obavijest čim aplikacija postane dostupna.</p>
+            <h2>Be among the first.</h2>
+            <p>EchoBlink is coming soon to the Google Play Store. Leave your email and we'll notify you as soon as the app becomes available.</p>
             
             <form class="waitlist-form" action="https://formspree.io/f/xbdepzao" method="POST">
-                <input type="email" name="email" placeholder="Tvoja email adresa" required class="email-input">
-                <button type="submit" class="btn btn-glow">Prijavi me</button>
+                <input type="email" name="email" placeholder="Your email address" required class="email-input">
+                <button type="submit" class="btn btn-glow">Notify me</button>
             </form>
         </div>
     </section>
@@ -162,12 +177,12 @@
         <div class="container footer-content">
             <div class="footer-logo">
                 <span class="logo-echo">Echo</span><span class="logo-blink">Blink</span>
-                <p class="copyright">© 2026 EchoBlink. Sva prava pridržana.</p>
+                <p class="copyright">© 2026 EchoBlink. All rights reserved.</p>
             </div>
             <div class="footer-links">
-                <a href="#kako-radi">O nama</a>
-                <a href="#">Privatnost</a>
-                <a href="#">Uvjeti korištenja</a>
+                <a href="#kako-radi">About us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
             </div>
         </div>
     </footer>

@@ -93,6 +93,33 @@ a {
     color: var(--neon-cyan);
 }
 
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-muted);
+}
+
+.lang-switcher a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.lang-switcher a.active {
+    color: #FFF;
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 /* ===== GUMBI ===== */
 .btn {
     display: inline-block;
@@ -453,6 +480,12 @@ section {
     
     .nav-links, .nav-container .btn-primary {
         display: none; /* Sakrivamo linkove i gumb na mobitelu */
+    }
+    
+    .lang-switcher {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
     }
     
     .radar-container {
