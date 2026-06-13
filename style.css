@@ -271,14 +271,12 @@ a {
 
 /* ===== RADAR POZADINSKA ANIMACIJA ===== */
 .radar-container {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    width: 800px;
-    height: 800px;
+    position: relative;
+    width: 500px;
+    height: 500px;
     z-index: 0;
     pointer-events: none;
+    flex-shrink: 0;
 }
 
 .radar-wave {
@@ -306,10 +304,7 @@ a {
 
 .radar-person {
     position: absolute;
-    font-size: 40px;
-    background: rgba(0,0,0,0.4);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    font-size: 50px;
     width: 60px;
     height: 60px;
     display: flex;
@@ -317,12 +312,13 @@ a {
     align-items: center;
     z-index: 2;
     animation: floatOrbit 6s infinite ease-in-out alternate;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
-.rp-1 { top: 20%; left: 30%; animation-delay: 0s; }
-.rp-2 { top: 70%; left: 20%; animation-delay: 1s; }
-.rp-3 { top: 30%; right: 25%; animation-delay: 2s; }
-.rp-4 { top: 75%; right: 30%; animation-delay: 3s; }
+.rp-1 { top: 35%; left: 35%; animation-delay: 0s; }
+.rp-2 { top: 60%; left: 35%; animation-delay: 1s; }
+.rp-3 { top: 35%; right: 35%; animation-delay: 2s; }
+.rp-4 { top: 65%; right: 35%; animation-delay: 3s; }
 
 @keyframes floatOrbit {
     0% { transform: translate(0, 0) scale(0.9); }
@@ -660,12 +656,12 @@ section {
 
     .person-2 {
         top: 75%;
-        right: 15%;
+        right: 0;
     }
 
     .person-3 {
         top: 75%;
-        left: 15%;
+        left: 0;
         bottom: auto;
     }
 
