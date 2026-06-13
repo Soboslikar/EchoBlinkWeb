@@ -595,6 +595,17 @@ section {
     }
 }
 
+@media (max-width: 600px) {
+    .business-animation {
+        transform: scale(0.65);
+        transform-origin: top center;
+        height: 260px; /* Prilagođena visina zbog skaliranja */
+        margin-top: 20px;
+        border: none;
+        background: transparent;
+    }
+}
+
 /* ===== SOS SEKCIJA ===== */
 .sos-section {
     background-color: #0A0F14;
