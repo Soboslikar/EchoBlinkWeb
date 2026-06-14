@@ -64,7 +64,6 @@ a {
     letter-spacing: 1px;
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .logo-img {
@@ -72,6 +71,7 @@ a {
     height: 32px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    margin-right: 10px;
 }
 
 .logo-echo { color: var(--text-main); }
