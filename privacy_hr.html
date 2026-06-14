@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoBlink | Pravila privatnosti</title>
+    <meta name="description" content="EchoBlink Pravila privatnosti">
+    <link rel="stylesheet" href="style.css?v=8">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .privacy-container {
+            max-width: 800px;
+            margin: 100px auto 50px auto;
+            padding: 20px;
+            background: #111;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,255,204,0.1);
+        }
+        .privacy-container h1, .privacy-container h2 {
+            color: #00FFCC;
+        }
+        .privacy-container h1 { margin-bottom: 10px; }
+        .privacy-container h2 { margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .privacy-container p, .privacy-container li {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .privacy-container ul { margin-left: 20px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGACIJA -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="hr.html" class="logo">
+                <img src="logo.webp" alt="EchoBlink Logo" class="logo-img">
+                <span class="logo-echo">Echo</span><span class="logo-blink">Blink</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="hr.html#kako-radi">Kako radi?</a></li>
+                <li><a href="hr.html#poslovanje">Za Posao</a></li>
+                <li><a href="hr.html#sos">SOS Sustav</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="hr.html#waitlist" class="btn btn-primary">Pridruži se listi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PRIVACY CONTENT -->
+    <section class="privacy-section">
+        <div class="container privacy-container">
+            <h1>Pravila privatnosti za EchoBlink</h1>
+            <p><strong>Datum stupanja na snagu:</strong> 14. lipnja 2026.</p>
+            <p>Dobrodošli u EchoBlink. Vaša privatnost nam je od iznimne važnosti. Ova Pravila privatnosti objašnjavaju kako EchoBlink ("mi", "nas" ili "naš") prikuplja, koristi i štiti vaše podatke kada koristite našu mobilnu aplikaciju.</p>
+            <p>EchoBlink je dizajniran da funkcionira prvenstveno kao offline, peer-to-peer komunikacijski alat. Prioritet nam je vaša privatnost držeći podatke lokalno na vašem uređaju kad god je to moguće.</p>
+
+            <h2>1. Podaci koje prikupljamo i kako ih koristimo</h2>
+            <p>Za pružanje naših ključnih značajki (SOS upozorenja, Megafon emitiranja i distribucija letaka), EchoBlink zahtijeva određena dopuštenja na uređaju. Međutim, <strong>mi ne prikupljamo, ne pohranjujemo na vanjskim poslužiteljima niti prodajemo vaše osobne podatke.</strong></p>
+
+            <h3>a) Podaci o lokaciji (Lokacija u pozadini)</h3>
+            <ul>
+                <li><strong>Zašto nam to treba:</strong> EchoBlink koristi Bluetooth Low Energy (BLE) za otkrivanje korisnika u blizini i potpuno offline prijenos poruka (SOS, letci, megafon upozorenja). Android zahtijeva dopuštenje za lokaciju kako bi skenirao BLE uređaje u pozadini.</li>
+                <li><strong>Kako to koristimo:</strong> Podaci o lokaciji koriste se <strong>isključivo</strong> lokalno na vašem uređaju kako bi se omogućilo skeniranje Bluetoothom i otkrivanje korisnika u blizini.</li>
+                <li><strong>Pohrana podataka:</strong> Mi <strong>ne</strong> pratimo, ne bilježimo i ne prenosimo vaše fizičke GPS koordinate ni na jedan središnji poslužitelj.</li>
+            </ul>
+
+            <h3>b) Bluetooth i uređaji u blizini</h3>
+            <ul>
+                <li><strong>Zašto nam to treba:</strong> Bluetooth je ključna tehnologija koja omogućuje aplikaciji EchoBlink slanje i primanje poruka offline.</li>
+                <li><strong>Kako to koristimo:</strong> Koristimo BLE za emitiranje podataka vašeg odabranog profila (poput vaše VCard posjetnice ili letka) i za primanje upozorenja od drugih.</li>
+            </ul>
+
+            <h3>c) Podaci korisničkog profila i VCard</h3>
+            <ul>
+                <li><strong>Što je to:</strong> Informacije koje dobrovoljno unosite u svoj EchoBlink profil (Ime, podaci za kontakt, poveznice na društvene mreže).</li>
+                <li><strong>Kako to koristimo:</strong> Ovi se podaci pohranjuju lokalno na vašem uređaju i emitiraju se drugim obližnjim EchoBlink korisnicima putem Bluetootha samo kada to izričito dopustite.</li>
+            </ul>
+
+            <h3>d) Telemetrijski podaci (Business Pro letci)</h3>
+            <ul>
+                <li><strong>Što je to:</strong> Ako stupite u interakciju s "Business Pro" letkom, aplikacija može anonimno zabilježiti broj pregleda.</li>
+                <li><strong>Kako to koristimo:</strong> Ova minimalna telemetrija (broj pregleda) sinkronizira se s bazom podataka isključivo kako bi se poslovnim korisnicima pružila točna statistika o interakciji s letkom. Nikakvi osobni identifikatori nisu povezani s ovim pregledima.</li>
+            </ul>
+
+            <h2>2. Pohrana i sigurnost podataka</h2>
+            <ul>
+                <li><strong>Lokalna pohrana:</strong> Velika većina vaših podataka (poruke, kontakti, profili) pohranjena je lokalno u internoj memoriji vašeg uređaja pomoću sigurnih baza podataka (SQLite).</li>
+                <li><strong>Nema centralnih računa:</strong> EchoBlink ne zahtijeva e-mail, lozinku ili registraciju računa na središnjem poslužitelju.</li>
+            </ul>
+
+            <h2>3. Usluge trećih strana</h2>
+            <p>EchoBlink može koristiti usluge trećih strana (poput Google ML Kita za prevođenje na uređaju ili Firebasea za anonimnu telemetriju). Ove usluge imaju svoja vlastita pravila o privatnosti:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" style="color: #00FFCC;">Googleova pravila o privatnosti</a></li>
+            </ul>
+
+            <h2>4. Privatnost djece</h2>
+            <p>EchoBlink ne prikuplja svjesno osobne podatke od djece mlađe od 13 godina. Ako ste roditelj ili skrbnik i znate da nam je vaše dijete dalo osobne podatke, molimo da nas kontaktirate.</p>
+
+            <h2>5. Promjene ovih Pravila privatnosti</h2>
+            <p>S vremena na vrijeme možemo ažurirati naša Pravila privatnosti. Obavijestit ćemo vas o svim promjenama objavljivanjem novih Pravila privatnosti na ovoj stranici i ažuriranjem "Datuma stupanja na snagu" na vrhu.</p>
+
+            <h2>6. Kontaktirajte nas</h2>
+            <p>Ako imate bilo kakvih pitanja ili prijedloga u vezi s našim Pravilima privatnosti, slobodno nas kontaktirajte na: <strong>echoblink.app@gmail.com</strong></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-echo">Echo</span><span class="logo-blink">Blink</span>
+                <p class="copyright">© 2026 EchoBlink. Sva prava pridržana.</p>
+            </div>
+            <div class="footer-links">
+                <a href="hr.html#kako-radi">O nama</a>
+                <a href="privacy_hr.html">Privatnost</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
