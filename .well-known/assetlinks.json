@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.echoblink",
+    "sha256_cert_fingerprints":
+    ["OVDJE_UNESITE_SHA256_KAD_POTPIŠETE_APLIKACIJU"]
+  }
+}]
